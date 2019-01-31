@@ -1,0 +1,155 @@
+$accent-color: #2282d6
+$font-primary: 'Roboto', sans-serif
+$color-border: #ccc
+$color-text: #505050
+$color-error: #a4040e
+
+html
+    height: 100%
+    min-height: 100%
+
+body
+    background: #fff
+    min-width: 320px
+    margin: 0
+    padding: 0
+    font-size: 14px
+    line-height: 1
+    font-family: $font-primary
+    font-weight: 400
+    height: 100%
+    min-height: 100%
+
+    > div
+        min-height: 100%
+        display: flex
+        flex-direction: column
+
+h2
+    padding: 0
+    margin: 0
+    font-weight: normal
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+
+
+.page
+    min-height: 100%
+    display: flex
+    flex-direction: column
+    flex: 1
+
+.header
+    margin: 0 0 20px
+
+    &__text
+        padding: 20px 0
+        text-align: center
+        font-weight: normal
+        font-size: 20px
+        color: $accent-color
+
+.progress
+    height: 10px
+    background-color: transparent
+    border-top: 1px solid $color-border
+    border-bottom: 1px solid $color-border
+    box-sizing: border-box
+
+    &__fill
+        width: 0
+        height: 8px
+        background-color: $accent-color
+        transition: width .25s ease-out
+
+.main
+    position: relative
+    padding: 20px 0 0
+    flex: 1
+    display: flex
+    flex-direction: column
+
+.form
+    display: flex
+    flex-direction: column
+    flex: 1
+
+    &__body
+        flex: 1
+
+    &__footer
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        padding: 20px
+        border-top: 1px solid $color-border
+
+.field
+    padding: 20px
+
+    &__label
+        display: block
+        font-weight: 300
+        color: $color-text
+        padding: 0 0 10px
+
+    &__error
+        display: block
+        font-weight: 300
+        padding: 0 0 10px
+        color: $color-error
+
+    &__input
+        width: calc(100% - 12px)
+        border: none
+        border-bottom: 1px solid $color-border
+        font-size: 16px
+        padding: 6px
+
+        &:focus
+            outline: none
+
+.button
+    color: $accent-color
+    background: none
+    border: none
+    cursor: pointer
+    align-self: flex-end
+
+    &__hidden
+        width: 0
+        height: 0
+        opacity: 0
+        overflow: hidden
+        text-indent: -100px
+
+    &:hover
+        opacity: 0.8
+
+    &__prev
+        color: $color-text
+
+.arrow
+    font-size: 10px
+    position: relative
+    top: -1px
+
+    &__right
+        padding-left: 3px
+
+.fields-group
+
+    &__item
+        border: 1px solid $color-border
+        border-radius: 2px
+    &__input
+        width: calc(100% - 12px)
+        text-align: center
+        border: none
+        font-size: 16px
+        padding: 6px
+        &:focus
+            outline: none
