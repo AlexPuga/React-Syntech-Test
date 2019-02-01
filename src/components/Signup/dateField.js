@@ -28,7 +28,7 @@ class dateField extends Component {
         if (birth_day.meta.touched && birth_day.meta.error) return <span className="field__error fields__error">{birth_day.meta.error}</span>
         if (birth_month.meta.touched && birth_month.meta.error) return <span className="field__error fields__error">{birth_month.meta.error}</span>
         if (birth_year.meta.touched && birth_year.meta.error) return <span className="field__error fields__error">{birth_year.meta.error}</span>
-        else return <label className="field__label fields__label">{label}</label>
+        return <label className="field__label fields__label">{label}</label>
     }
 }
 
