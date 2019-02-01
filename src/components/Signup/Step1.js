@@ -1,9 +1,9 @@
-import React, {Component, Fragment} from 'react'
+import React from 'react'
 import {Field, reduxForm} from 'redux-form'
 import validate from './validate'
 import textField from './textField'
 
-const Step_1 = ({handleSubmit}) => {
+const Step1 = ({handleSubmit}) => {
 
     return (
         <form className="form" onSubmit={handleSubmit}>
@@ -45,4 +45,4 @@ export default reduxForm({
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true,
     validate
-})(Step_1)
+})(Step1)

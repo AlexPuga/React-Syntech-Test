@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import Step_1 from './Step_1'
-import Step_2 from './Step_2'
-import Step_3 from './Step_1'
+import Step1 from './Step1'
+import Step2 from './Step2'
+import Step3 from './Step1'
 
 class SignupForm extends Component {
     static propTypes = {
@@ -14,7 +14,6 @@ class SignupForm extends Component {
     }
 
     render() {
-        const {onSubmit} = this.props
         const {page} = this.state
 
         return (
@@ -26,9 +25,9 @@ class SignupForm extends Component {
                     </div>
                 </header>
                 <main className="main">
-                    {page === 1 && <Step_1 onSubmit={this.nextPage}/>}
-                    {page === 2 && <Step_2 previousPage={this.previousPage} onSubmit={this.nextPage}/>}
-                    {page === 3 && <Step_3/>}
+                    {page === 1 && <Step1 onSubmit={this.nextPage}/>}
+                    {page === 2 && <Step2 previousPage={this.previousPage} onSubmit={this.nextPage}/>}
+                    {page === 3 && <Step3/>}
                 </main>
             </div>
         )

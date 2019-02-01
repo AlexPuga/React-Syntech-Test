@@ -1,8 +1,8 @@
 $accent-color: #2282d6
-$font-primary: 'Roboto', sans-serif
+$font-primary: 'Hind Guntur', sans-serif
 $color-border: #ccc
 $color-text: #505050
-$color-error: #a4040e
+$color-error: #ff0000
 
 html
     height: 100%
@@ -35,6 +35,32 @@ input::-webkit-inner-spin-button
     -webkit-appearance: none
     margin: 0
 
+input::-webkit-input-placeholder
+    color: #bcbcbc
+    font-family: $font-primary
+    font-weight: 300
+input::-moz-placeholder
+    color: #bcbcbc
+    font-family: $font-primary
+    font-weight: 300
+input::-moz-placeholder
+    color: #bcbcbc
+    font-family: $font-primary
+    font-weight: 300
+input::-ms-input-placeholder
+    color: #bcbcbc
+    font-family: $font-primary
+    font-weight: 300
+
+input:focus::-webkit-input-placeholder
+    opacity: 0
+input:focus:-moz-placeholder
+    opacity: 0
+input:focus::-moz-placeholder
+    opacity: 0
+input:focus:-ms-input-placeholder
+    opacity: 0
+
 
 .page
     min-height: 100%
@@ -63,7 +89,7 @@ input::-webkit-inner-spin-button
         width: 0
         height: 8px
         background-color: $accent-color
-        transition: width .25s ease-out
+        transition: width .3s ease-out
 
 .main
     position: relative
@@ -92,15 +118,18 @@ input::-webkit-inner-spin-button
 
     &__label
         display: block
-        font-weight: 300
-        color: $color-text
         padding: 0 0 10px
-
+        text-transform: uppercase
+        font-size: 10px
+        font-weight: 400
+        color: $color-text
     &__error
         display: block
-        font-weight: 300
         padding: 0 0 10px
+        font-size: 10px
+        font-weight: 400
         color: $color-error
+        text-transform: uppercase
 
     &__input
         width: calc(100% - 12px)
@@ -140,16 +169,50 @@ input::-webkit-inner-spin-button
     &__right
         padding-left: 3px
 
+.fields
+    padding: 20px
+
+    &__label
+        display: block
+        padding: 0 0 10px
+        text-align: center
+        font-size: 10px
+        font-weight: 400
+        color: $color-text
+        text-transform: uppercase
+
+    &__error
+        display: block
+        padding: 0 0 10px
+        text-align: center
+        font-size: 10px
+        font-weight: 400
+        color: $color-error
+        text-transform: uppercase
+
 .fields-group
+    display: flex
+    justify-content: stretch
+    width: 100%
+
 
     &__item
+        flex: 1
         border: 1px solid $color-border
-        border-radius: 2px
+        &:first-child
+            border-right: none
+            border-radius: 3px 0 0 3px
+        &:last-child
+            border-left: none
+            border-radius: 0 3px 3px 0
+
     &__input
         width: calc(100% - 12px)
         text-align: center
         border: none
         font-size: 16px
         padding: 6px
+        background-color: transparent
+
         &:focus
             outline: none

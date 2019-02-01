@@ -1,12 +1,12 @@
 import React from 'react'
-import {Field, Fields, reduxForm} from 'redux-form'
+import {Fields, reduxForm} from 'redux-form'
 import validate from './validate'
 import dateField from './dateField'
-import genderField from './genderField'
-import selectField from './selectField'
+// import genderField from './genderField'
+// import selectField from './selectField'
 
 
-const Step_2 = ({ handleSubmit, previousPage }) => {
+const Step2 = ({ handleSubmit, previousPage }) => {
 
     return(
         <form className="form" onSubmit={handleSubmit}>
@@ -20,18 +20,6 @@ const Step_2 = ({ handleSubmit, previousPage }) => {
                     type="text"
                     component={dateField}
                     label="Date of birth"
-                />
-                <Field
-                    name="gender"
-                    type="password"
-                    component={genderField}
-                    label="Gender"
-                />
-                <Field
-                    name="rpassword"
-                    type="password"
-                    component={selectField}
-                    label="Confirm Password"
                 />
             </div>
             <div className="form__footer">
@@ -49,5 +37,5 @@ export default reduxForm({
     form: 'signup',
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true,
-    validate,
-})(Step_2)
+    validate
+})(Step2)
